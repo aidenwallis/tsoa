@@ -108,7 +108,7 @@ export function RegisterRoutes(router: any) {
                       .catch(fail);
               } else {
                   for (const name in secMethod) {
-                      koaAuthentication(context.request, name, secMethod[name])
+                      return koaAuthentication(context.request, name, secMethod[name])
                           .then(succeed)
                           .catch(fail);
                   }
